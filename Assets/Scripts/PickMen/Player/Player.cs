@@ -9,14 +9,24 @@ namespace PickMen.Players
     public partial class Player : MonoBehaviour
     {
         [Header("Components")]
-        [SerializeField] private ManagedInputMap inputMap;
-        [SerializeField] private Transform relativeTransform;
-        [SerializeField] private CharacterController controller;
-        [SerializeField] private AreaDetector3D groundDetector;
+        [SerializeField]
+        private PlayerInput input;
+
+        [SerializeField]
+        private Transform relativeTransform;
+
+        [SerializeField]
+        private CharacterController controller;
+
+        [SerializeField]
+        private AreaDetector3D groundDetector;
 
         [Header("Settings")]
-        [SerializeField] private float moveSpeed = 5.0f;
-        [SerializeField] private float jumpPower = 4.0f;
+        [SerializeField]
+        private float moveSpeed = 5.0f;
+
+        [SerializeField]
+        private float jumpPower = 4.0f;
 
         [AutoEvent(nameof(IManagedInput.Performed), nameof(OnJumpInput))]
         private IManagedInput jumpInput;
@@ -27,8 +37,8 @@ namespace PickMen.Players
 
         private void Awake()
         {
-            moveInput = inputMap.GetInput("Move");
-            jumpInput = inputMap.GetInput("Jump");
+            moveInput = input.MoveInput;
+            jumpInput = input.JumpInput;
 
             CursorManager.SetCursorVisibility(false);
             CursorManager.SetCursorLockMode(CursorLockMode.Locked);
