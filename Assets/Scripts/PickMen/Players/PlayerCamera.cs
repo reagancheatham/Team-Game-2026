@@ -14,6 +14,8 @@ namespace PickMen.Players
         private void Awake()
         {
             camera.Input = input.InputMap;
+
+            camera.Initialize();
         }
     }
 }

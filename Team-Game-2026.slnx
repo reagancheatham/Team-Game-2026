@@ -72,7 +72,6 @@
   <Project Path="Unity.ShaderGraph.Utilities.csproj" />
   <Project Path="Shears.Pathfinding.Editor.csproj" />
   <Project Path="Unity.VisualScripting.Shared.Editor.csproj" />
-  <Project Path="PickMen.Players.csproj" />
   <Project Path="Unity.Profiling.Core.csproj" />
   <Project Path="Shears.Beziers.csproj" />
   <Project Path="Shears.Input.Editor.csproj" />
@@ -82,8 +81,10 @@
   <Project Path="Unity.CollabProxy.Editor.csproj" />
   <Project Path="Shears.Cameras.csproj" />
   <Project Path="Unity.RenderPipeline.Universal.ShaderLibrary.csproj" />
+  <Project Path="PickMen.Interaction.csproj" />
   <Project Path="Shears.Loading.Editor.csproj" />
   <Project Path="Shears.GraphViews.csproj" />
+  <Project Path="PickMen.Players.csproj" />
   <Project Path="Shears.Editor.WindowTools.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.Shaders.csproj" />
