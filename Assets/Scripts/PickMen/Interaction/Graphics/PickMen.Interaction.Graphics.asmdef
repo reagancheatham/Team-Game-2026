@@ -1,10 +1,9 @@
 {
-    "name": "PickMen.Interaction",
-    "rootNamespace": "PickMen.Interaction",
+    "name": "PickMen.Interaction.Graphics",
+    "rootNamespace": "PickMen.Interaction.Graphics",
     "references": [
         "GUID:b28a31c08beef024d83a7aa1ec3f2f6d",
-        "GUID:82e1ca9b695ad5f4b9951665b5cfbd3f",
-        "GUID:47c78b473e92098469ae5153d34a31e6"
+        "GUID:cbf8c11025a0b474198ddadc382c1587"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

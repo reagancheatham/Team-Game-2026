@@ -67,6 +67,8 @@
   <Project Path="Shears.UI.csproj" />
   <Project Path="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
   <Project Path="UnityEditor.UI.Analytics.csproj" />
+  <Project Path="PickMen.Interaction.Graphics.csproj" />
+  <Project Path="PickMen.Players.csproj" />
   <Project Path="Shears.Pathfinding.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.csproj" />
   <Project Path="Unity.ShaderGraph.Utilities.csproj" />
@@ -84,7 +86,6 @@
   <Project Path="PickMen.Interaction.csproj" />
   <Project Path="Shears.Loading.Editor.csproj" />
   <Project Path="Shears.GraphViews.csproj" />
-  <Project Path="PickMen.Players.csproj" />
   <Project Path="Shears.Editor.WindowTools.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.Shaders.csproj" />
