@@ -807,7 +807,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 226837360306b984ebf9b93e6e0f982f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 1841457705}
   - component: {fileID: 1841457708}
   m_Layer: 7
-  m_Name: Test Pickup
+  m_Name: Strawberry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1179,7 +1179,7 @@ Transform:
   m_GameObject: {fileID: 1841457703}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14676, y: -0.028, z: 1.619}
+  m_LocalPosition: {x: -1.82, y: 0, z: 4.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841457703}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53efbd8a47a66a842a8523e7a30aa3e2, type: 3}
   m_Name: 
@@ -1416,6 +1416,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8185181559359619090, guid: 3af06e9d14abe4b45a9e230ddc37147e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9122542781219582296, guid: 3af06e9d14abe4b45a9e230ddc37147e, type: 3}
       propertyPath: m_Name
       value: Blue Pellet
@@ -1436,6 +1440,10 @@ PrefabInstance:
     - target: {fileID: 1918009838282797701, guid: 71e8957d1705c4f4b97d64abaf1e8309, type: 3}
       propertyPath: m_Name
       value: Yellow Pellet
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334740199229674868, guid: 71e8957d1705c4f4b97d64abaf1e8309, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8581786585741252507, guid: 71e8957d1705c4f4b97d64abaf1e8309, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1493,6 +1501,14 @@ PrefabInstance:
     - target: {fileID: 5294626199154428183, guid: fcdf99f4e2baaf04787d7d1f37dcd623, type: 3}
       propertyPath: m_Name
       value: Red Pellet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302426673672157622, guid: fcdf99f4e2baaf04787d7d1f37dcd623, type: 3}
+      propertyPath: renderer
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302426673672157622, guid: fcdf99f4e2baaf04787d7d1f37dcd623, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5689152495048901839, guid: fcdf99f4e2baaf04787d7d1f37dcd623, type: 3}
       propertyPath: m_LocalPosition.x
