@@ -10,7 +10,7 @@ namespace PickMen.Interaction.Graphics
         private const string FIRST_PERSON_LAYER = "First Person";
 
         [SerializeField]
-        new private Renderer renderer;
+        private GameObject model;
 
         [Auto]
         [AutoEvent(nameof(Pickup.PickedUp), nameof(OnPickedUp))]
@@ -19,12 +19,12 @@ namespace PickMen.Interaction.Graphics
 
         private void OnPickedUp()
         {
-            renderer.gameObject.layer = LayerMask.NameToLayer(FIRST_PERSON_LAYER);
+            model.layer = LayerMask.NameToLayer(FIRST_PERSON_LAYER);
         }
 
         private void OnReleased()
         {
-            renderer.gameObject.layer = LayerMask.NameToLayer(INTERACTABLE_LAYER);
+            model.layer = LayerMask.NameToLayer(INTERACTABLE_LAYER);
         }
     }
 }
