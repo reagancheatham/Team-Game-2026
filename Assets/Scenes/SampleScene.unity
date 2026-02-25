@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &91894080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2096614533367587858, guid: 3af06e9d14abe4b45a9e230ddc37147e, type: 3}
+  m_PrefabInstance: {fileID: 5534997252364298408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &143487277
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +987,11 @@ MonoBehaviour:
   relativeTransform: {fileID: 330585546}
   controller: {fileID: 1414033853}
   groundDetector: {fileID: 2033800741}
+--- !u!1 &1488452657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5854049041658548225, guid: 71e8957d1705c4f4b97d64abaf1e8309, type: 3}
+  m_PrefabInstance: {fileID: 6724036565822216997}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1570959710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d62301de5ea0ea746ac61d0c1ccdf620, type: 3}
@@ -1204,8 +1214,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8185181559359619090, guid: 3af06e9d14abe4b45a9e230ddc37147e, type: 3}
+      propertyPath: model
+      value: 
+      objectReference: {fileID: 91894080}
+    - target: {fileID: 8185181559359619090, guid: 3af06e9d14abe4b45a9e230ddc37147e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9122542781219582296, guid: 3af06e9d14abe4b45a9e230ddc37147e, type: 3}
       propertyPath: m_Name
@@ -1286,8 +1300,12 @@ PrefabInstance:
       value: Yellow Pellet
       objectReference: {fileID: 0}
     - target: {fileID: 7334740199229674868, guid: 71e8957d1705c4f4b97d64abaf1e8309, type: 3}
+      propertyPath: model
+      value: 
+      objectReference: {fileID: 1488452657}
+    - target: {fileID: 7334740199229674868, guid: 71e8957d1705c4f4b97d64abaf1e8309, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8581786585741252507, guid: 71e8957d1705c4f4b97d64abaf1e8309, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1351,12 +1369,16 @@ PrefabInstance:
       value: Red Pellet
       objectReference: {fileID: 0}
     - target: {fileID: 5302426673672157622, guid: fcdf99f4e2baaf04787d7d1f37dcd623, type: 3}
+      propertyPath: model
+      value: 
+      objectReference: {fileID: 7025194794231451821}
+    - target: {fileID: 5302426673672157622, guid: fcdf99f4e2baaf04787d7d1f37dcd623, type: 3}
       propertyPath: renderer
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5302426673672157622, guid: fcdf99f4e2baaf04787d7d1f37dcd623, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5689152495048901839, guid: fcdf99f4e2baaf04787d7d1f37dcd623, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1403,6 +1425,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcdf99f4e2baaf04787d7d1f37dcd623, type: 3}
+--- !u!1 &7025194794231451821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5130084696994017645, guid: fcdf99f4e2baaf04787d7d1f37dcd623, type: 3}
+  m_PrefabInstance: {fileID: 7025194794231451820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

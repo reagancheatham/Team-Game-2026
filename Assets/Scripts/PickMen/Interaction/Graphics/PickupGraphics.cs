@@ -19,12 +19,18 @@ namespace PickMen.Interaction.Graphics
 
         private void OnPickedUp()
         {
-            model.layer = LayerMask.NameToLayer(FIRST_PERSON_LAYER);
+            var layer = LayerMask.NameToLayer(FIRST_PERSON_LAYER);
+
+            model.layer = layer;
+            model.SetLayerOnAllChildren(layer);
         }
 
         private void OnReleased()
         {
-            model.layer = LayerMask.NameToLayer(INTERACTABLE_LAYER);
+            var layer = LayerMask.NameToLayer(INTERACTABLE_LAYER);
+
+            model.layer = layer;
+            model.SetLayerOnAllChildren(layer);
         }
     }
 }
