@@ -711,7 +711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7258166528769570929}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walkway
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Entrance
       objectReference: {fileID: 0}
+    - target: {fileID: 1974337007890173506, guid: 7e4d99e265826194187e2e9debbc2785, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5869984278449438748, guid: 7e4d99e265826194187e2e9debbc2785, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
