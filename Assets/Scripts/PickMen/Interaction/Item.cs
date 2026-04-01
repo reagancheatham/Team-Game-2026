@@ -6,11 +6,15 @@ using UnityEngine;
 
 namespace PickMen.Interaction
 {
-    public class Pickup : MonoBehaviour, IInteractable
+    public partial class Item : MonoBehaviour, IInteractable
     {
         private static readonly TweenData dropTweenData = new(0.2f, easingFunction: TweenEase.OutBounce);
 
-        [SerializeField]
+        [SerializeField, RuntimeReadOnly]
+        [AutoProperty]
+        private ItemData data;
+
+        [SerializeField, RuntimeReadOnly]
         private RayDetector3D detector;
 
         private Tween moveTween;

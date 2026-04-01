@@ -1,19 +1,24 @@
+using PickMen.Interaction;
+using Shears;
+using System;
 using UnityEngine;
 
 namespace PickMen.Players
 {
     public class InventorySlot : MonoBehaviour
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-        
-        }
+        [SerializeField, ReadOnly]
+        private Item item;
 
-        // Update is called once per frame
-        void Update()
+        public Item Item => item;
+
+        public event Action<Item> ItemChanged;
+
+        public void SetItem(Item item)
         {
-        
+            this.item = item;
+
+            ItemChanged?.Invoke(item);
         }
     }
 }

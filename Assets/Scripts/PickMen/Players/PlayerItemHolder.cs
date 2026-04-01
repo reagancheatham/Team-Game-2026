@@ -1,21 +1,32 @@
 using PickMen.Interaction;
 using Shears;
+using Shears.Input;
 using UnityEngine;
-using UnityEngine.XR;
 
 namespace PickMen.Players
 {
-    public class PlayerItemHolder : MonoBehaviour
+    public partial class PlayerItemHolder : MonoBehaviour
     {
+        [SerializeField]
+        private PlayerInput input;
+
         [SerializeField]
         private Transform hand;
 
         [SerializeField, ReadOnly]
-        private Pickup heldItem;
+        private Item heldItem;
 
-        public Pickup HeldItem => heldItem;
+        [AutoEvent(nameof(IManagedInput.Performed), nameof(ReleaseToGround))]
+        private IManagedInput dropInput;
 
-        public void PickUp(Pickup item)
+        public Item HeldItem => heldItem;
+
+        private void Awake()
+        {
+            dropInput = input.DropInput;
+        }
+
+        public void PickUp(Item item)
         {
             if (heldItem != null)
                 return;
@@ -26,7 +37,16 @@ namespace PickMen.Players
             heldItem.PickUp();
         }
 
-        public void Release()
+        public Item ReleaseToInventory()
+        {
+            var previousItem = heldItem;
+
+            heldItem = null;
+
+            return previousItem;
+        }
+
+        public void ReleaseToGround()
         {
             if (heldItem == null)
                 return;

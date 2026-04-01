@@ -13,35 +13,17 @@ namespace PickMen.Players
         private PlayerInput input;
 
         [SerializeField]
-        private PlayerItemHolder itemHolder;
+        private PlayerInventory inventory;
 
         [SerializeField]
         private RayDetector3D detector;
 
-        [AutoEvent(nameof(IManagedInput.Performed), nameof(OnInteractInput))]
+        [AutoEvent(nameof(IManagedInput.Performed), nameof(TryInteract))]
         private IManagedInput interactInput;
-
-        [AutoEvent(nameof(IManagedInput.Performed), nameof(OnDropInput))]
-        private IManagedInput dropInput;
 
         private void Awake()
         {
             interactInput = input.InteractInput;
-            dropInput = input.DropInput;
-        }
-
-        private void OnInteractInput()
-        {
-            if (itemHolder.HeldItem != null)
-                return;
-            else
-                TryInteract();
-        }
-
-        private void OnDropInput()
-        {
-            if (itemHolder.HeldItem != null)
-                itemHolder.Release();
         }
 
         private void TryInteract()
@@ -49,11 +31,8 @@ namespace PickMen.Players
             if (!detector.Detect())
                 return;
 
-            if (detector.TryGetDetection(out Pickup pickup, true))
-            {
-                itemHolder.PickUp(pickup);
-                return;
-            }
+            if (detector.TryGetDetection(out Item item, true))
+                inventory.AddItem(item);
         }
     }
 }

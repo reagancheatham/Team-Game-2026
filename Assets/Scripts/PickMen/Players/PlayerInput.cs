@@ -17,6 +17,7 @@ namespace PickMen.Players
         public IManagedInput LookInput { get; private set; }
         public IManagedInput InteractInput { get; private set; }
         public IManagedInput DropInput { get; private set; }
+        public IManagedInput ScrollInventory { get; private set; }
 
         private void Awake()
         {
@@ -27,7 +28,8 @@ namespace PickMen.Players
                 ("Crouch", i => CrouchInput = i),
                 ("Look", i => LookInput = i),
                 ("Interact", i => InteractInput = i),
-                ("Drop", i => DropInput = i)
+                ("Drop", i => DropInput = i),
+                ("Scroll Inventory", i => ScrollInventory = i)
             );
         }
     }

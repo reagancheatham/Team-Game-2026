@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace PickMen.Interaction.Graphics
 {
-    [RequireComponent(typeof(Pickup))]
-    public partial class PickupGraphics : MonoBehaviour
+    [RequireComponent(typeof(Item))]
+    public partial class ItemGraphics : MonoBehaviour
     {
         private const string INTERACTABLE_LAYER = "Interactable";
         private const string FIRST_PERSON_LAYER = "First Person";
@@ -13,9 +13,9 @@ namespace PickMen.Interaction.Graphics
         private GameObject model;
 
         [Auto]
-        [AutoEvent(nameof(Pickup.PickedUp), nameof(OnPickedUp))]
-        [AutoEvent(nameof(Pickup.Released), nameof(OnReleased))]
-        private Pickup pickup;
+        [AutoEvent(nameof(Item.PickedUp), nameof(OnPickedUp))]
+        [AutoEvent(nameof(Item.Released), nameof(OnReleased))]
+        private Item pickup;
 
         private void OnPickedUp()
         {
