@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace PickMen.Players
 {
-    public partial class PlayerInventory : MonoBehaviour
+    public sealed partial class PlayerInventory : MonoBehaviour
     {
         [SerializeField]
         private PlayerInput input;
@@ -15,13 +15,17 @@ namespace PickMen.Players
         [SerializeField]
         private PlayerItemHolder itemHolder;
 
+        [SerializeField, ReadOnly]
+        private int selectedSlot = 0;
+
         [SerializeField]
         private List<InventorySlot> slots = new();
 
         [AutoEvent(nameof(IManagedInput.PerformedWithInfo), nameof(OnScrollSlotInput))]
         private IManagedInput scrollInventoryInput;
 
-        private int selectedSlot = 0;
+        [AutoEvent(nameof(IManagedInput.Performed), nameof(OnDropInput))]
+        private IManagedInput dropInput;
 
         public int SelectedSlot => selectedSlot;
 
@@ -30,6 +34,7 @@ namespace PickMen.Players
         private void Awake()
         {
             scrollInventoryInput = input.ScrollInventory;
+            dropInput = input.DropInput;
         }
 
         private void Start()
@@ -41,9 +46,12 @@ namespace PickMen.Players
         {
             foreach (var slot in slots)
             {
-                if (slot.Item == null)
+                if (slot.Item.Value == null)
                 {
-                    slot.SetItem(item);
+                    slot.Item.Value = item;
+                    slot.Item.Value.gameObject.SetActive(false);
+
+                    UpdateHeldItem();
                     return;
                 }
             }
@@ -51,19 +59,43 @@ namespace PickMen.Players
 
         private void OnScrollSlotInput(ManagedInputInfo info)
         {
-            int scrollValue = Mathf.RoundToInt(info.Input.ReadValue<float>());
+            int scrollValue = Mathf.RoundToInt(info.Input.ReadValue<Vector2>().y);
 
             selectedSlot += scrollValue;
-            selectedSlot %= slots.Count;
+
+            selectedSlot = (selectedSlot % slots.Count + slots.Count) % slots.Count;
 
             UpdateHeldItem();
-
             SelectedSlotChanged?.Invoke(selectedSlot);
+        }
+
+        private void OnDropInput()
+        {
+            if (slots[selectedSlot].Item.Value == null)
+                return;
+
+            slots[selectedSlot].Item.Value = null;
+            itemHolder.ReleaseToGround();
         }
 
         private void UpdateHeldItem()
         {
-            
+            var slot = slots[selectedSlot];
+
+            if (itemHolder.HeldItem == slot.Item.Value)
+                return;
+
+            if (itemHolder.HeldItem != null)
+            {
+                var oldItem = itemHolder.ReleaseToInventory();
+                oldItem.gameObject.SetActive(false);
+            }
+
+            if (slot.Item.Value != null)
+            {
+                slot.Item.Value.gameObject.SetActive(true);
+                itemHolder.Hold(slot.Item.Value);
+            }
         }
     }
 }

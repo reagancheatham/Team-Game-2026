@@ -3,8 +3,10 @@
     "rootNamespace": "PickMen.Players.Graphics",
     "references": [
         "GUID:b28a31c08beef024d83a7aa1ec3f2f6d",
-        "GUID:ce541ecfda61bc84dafabd55606e64d7",
-        "GUID:cbf8c11025a0b474198ddadc382c1587"
+        "GUID:f407bcfcca25ec846a3710ecbfd18364",
+        "GUID:f9343658ba9f34f40af4f1a7b0c76be7",
+        "GUID:cbf8c11025a0b474198ddadc382c1587",
+        "GUID:ce541ecfda61bc84dafabd55606e64d7"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -40,7 +40,6 @@
   <Project Path="Unity.VisualScripting.Flow.csproj" />
   <Project Path="Unity.PerformanceTesting.csproj" />
   <Project Path="Shears.Signals.csproj" />
-  <Project Path="Shears.Common.Editor.csproj" />
   <Project Path="Unity.TextMeshPro.csproj" />
   <Project Path="Shears.Tweens.csproj" />
   <Project Path="Unity.TextMeshPro.Editor.csproj" />
@@ -68,6 +67,7 @@
   <Project Path="UnityEditor.UI.Analytics.csproj" />
   <Project Path="PickMen.Players.csproj" />
   <Project Path="Shears.Pathfinding.csproj" />
+  <Project Path="Shears.Common.Editor.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.csproj" />
   <Project Path="Unity.ShaderGraph.Utilities.csproj" />
   <Project Path="Shears.Pathfinding.Editor.csproj" />

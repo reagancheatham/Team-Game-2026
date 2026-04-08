@@ -1,14 +1,14 @@
 using PickMen.Interaction;
 using Shears;
+using Shears.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace PickMen.Players.Graphics
 {
-    public partial class InventorySlotUI : MonoBehaviour
+    public sealed class InventorySlotUI : UIElement
     {
         [SerializeField]
-        [AutoEvent(nameof(InventorySlot.ItemChanged), nameof(OnItemChanged))]
         private InventorySlot slot;
 
         [SerializeField]
@@ -17,11 +17,9 @@ namespace PickMen.Players.Graphics
         [SerializeField]
         private Image highlight;
 
-        private void OnEnable()
+        protected override void BindRefs()
         {
-            __AutoOnEnable();
-
-            OnItemChanged(slot.Item);
+            Bind(slot.Item, OnItemChanged);
         }
 
         public void Highlight()
@@ -34,7 +32,12 @@ namespace PickMen.Players.Graphics
             highlight.gameObject.SetActive(false);
         }
 
-        private void OnItemChanged(Item item)
+        private void OnItemChanged(RefChangeEvent<Item> evt)
+        {
+            UpdateItemVisual(evt.newValue);
+        }
+
+        private void UpdateItemVisual(Item item)
         {
             if (item == null)
             {

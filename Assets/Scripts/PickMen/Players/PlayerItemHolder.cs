@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace PickMen.Players
 {
-    public partial class PlayerItemHolder : MonoBehaviour
+    public sealed partial class PlayerItemHolder : MonoBehaviour
     {
         [SerializeField]
         private PlayerInput input;
@@ -16,22 +16,18 @@ namespace PickMen.Players
         [SerializeField, ReadOnly]
         private Item heldItem;
 
-        [AutoEvent(nameof(IManagedInput.Performed), nameof(ReleaseToGround))]
-        private IManagedInput dropInput;
-
         public Item HeldItem => heldItem;
 
-        private void Awake()
-        {
-            dropInput = input.DropInput;
-        }
-
-        public void PickUp(Item item)
+        public void Hold(Item item)
         {
             if (heldItem != null)
                 return;
 
             heldItem = item;
+
+            if (heldItem == null)
+                return;
+
             heldItem.transform.SetParent(hand);
             heldItem.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
             heldItem.PickUp();

@@ -24,6 +24,7 @@ namespace PickMen.Players
         private Tween crouchTween;
         private PlayerData data;
         private PlayerInput input;
+        private Vector3 velocity;
         private bool isGrounded;
         private bool isCrouching;
         private bool isListeningToJump;
@@ -60,7 +61,10 @@ namespace PickMen.Players
         {
             UpdateIsCrouched();
             UpdateIsGrounded();
-            ApplyMovement();
+            CalculateHorizontalMovement();
+            CalculateVerticalMovement();
+
+            controller.Move(Time.deltaTime * velocity);
         }
 
         private void UpdateIsGrounded()
@@ -110,7 +114,7 @@ namespace PickMen.Players
             isCrouching = true;
         }
 
-        private void ApplyMovement()
+        private void CalculateHorizontalMovement()
         {
             Vector2 input = this.input.MoveInput.ReadValue<Vector2>();
             Vector3 forward = relativeTransform.forward * input.y;
@@ -122,9 +126,19 @@ namespace PickMen.Players
             forward.Normalize();
             right.Normalize();
 
-            Vector3 movement = GetMoveSpeed() * Time.deltaTime * (forward + right).normalized;
+            Vector3 movement = GetMoveSpeed() * (forward + right).normalized;
+            velocity = movement.With(y: velocity.y);
+        }
 
-            controller.Move(movement);
+        private void CalculateVerticalMovement()
+        {
+            if (!jumpTimer.IsDone || isGrounded)
+            {
+                velocity.y = 0;
+                return;
+            }
+
+            velocity.y += Time.deltaTime * Physics.gravity.y;
         }
 
         private void OnJumpInput()
