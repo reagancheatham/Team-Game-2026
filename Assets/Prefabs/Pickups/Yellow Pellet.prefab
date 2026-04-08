@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1fadeae2598da04fa28b0374b4e9107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PickMen.Interaction::PickMen.Interaction.Pickup
+  data: {fileID: 0}
   detector: {fileID: 5441241811677092354}
 --- !u!114 &7334740199229674868
 MonoBehaviour:
@@ -232,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53efbd8a47a66a842a8523e7a30aa3e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PickMen.Interaction.Graphics::PickMen.Interaction.Graphics.PickupGraphics
-  renderer: {fileID: 4145769857077899040}
+  model: {fileID: 5854049041658548225}
 --- !u!1 &2472939946013152896
 GameObject:
   m_ObjectHideFlags: 0

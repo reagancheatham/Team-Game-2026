@@ -786,6 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1fadeae2598da04fa28b0374b4e9107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PickMen.Interaction::PickMen.Interaction.Pickup
+  data: {fileID: 0}
   detector: {fileID: 3023091897087405291}
 --- !u!114 &8185181559359619090
 MonoBehaviour:
@@ -799,4 +800,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53efbd8a47a66a842a8523e7a30aa3e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PickMen.Interaction.Graphics::PickMen.Interaction.Graphics.PickupGraphics
-  renderer: {fileID: 6600277401394490015}
+  model: {fileID: 2096614533367587858}

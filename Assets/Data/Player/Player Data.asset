@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca39645f6a92514c8dfc7da288749f1, type: 3}
   m_Name: Player Data
   m_EditorClassIdentifier: PickMen.Players::PickMen.Players.PlayerData
-  moveSpeed: 5
+  walkSpeed: 5
   sprintSpeed: 8
   crouchSpeed: 3
-  jumpPower: 4
+  airSpeed: 5
+  jumpPower: 6
   crouchHeight: 1
