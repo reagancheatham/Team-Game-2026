@@ -1,7 +1,4 @@
-using Shears;
-using Shears.Detection;
 using Shears.Input;
-using System.Collections;
 using UnityEngine;
 
 namespace PickMen.Players
