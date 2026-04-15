@@ -1,19 +1,21 @@
+using PickMen.GameManagement;
+using Shears.Detection;
 using UnityEngine;
+
 
 namespace PickMen.Interaction
 {
     public class Onion : MonoBehaviour
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-        
-        }
+        [SerializeField] private AreaDetector3D detector;
 
-        // Update is called once per frame
-        void Update()
-        {
-        
+        private void FixedUpdate() {
+            if (!detector.Detect() || !detector.TryGetDetection(out Item item, true))
+                return;
+
+            Destroy(item.gameObject);
+            ScoreManager.AddScore(12);
+
         }
     }
 }
