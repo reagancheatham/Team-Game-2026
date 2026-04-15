@@ -2401,6 +2401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1281b6f3a5bcae948b5f0e0dde9314c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PickMen.Interaction::PickMen.Interaction.Enterance
+  player: {fileID: 1414033850}
   TPPoint: {fileID: 1515013552}
 --- !u!135 &1072330459
 SphereCollider:
@@ -2992,6 +2993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1281b6f3a5bcae948b5f0e0dde9314c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PickMen.Interaction::PickMen.Interaction.Enterance
+  player: {fileID: 1414033850}
   TPPoint: {fileID: 870983616}
 --- !u!135 &1693643686
 SphereCollider:
