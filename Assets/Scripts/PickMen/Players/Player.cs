@@ -16,6 +16,9 @@ namespace PickMen.Players
         [SerializeField]
         private PlayerMovement movement;
 
+        [SerializeField]
+        private Transform spawn;
+
         private void Awake()
         {
             CursorManager.SetCursorVisibility(false);
@@ -27,6 +30,13 @@ namespace PickMen.Players
         private void Update()
         {
             movement.UpdateMovement();
+        }
+
+        public void Die()
+        {
+            movement.Controller.enabled = false;
+            transform.position = spawn.position;
+            movement.Controller.enabled = true;
         }
     }
 }

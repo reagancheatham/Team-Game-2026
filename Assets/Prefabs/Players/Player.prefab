@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 548207358583543964}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Inventory Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 8409003908712710486}
   - component: {fileID: 4701663010085560669}
   - component: {fileID: 264097341531097584}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,6 +93,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 6536d9fa632c5f641830aef927c061c4, type: 2}
   input: {fileID: 8409003908712710486}
   movement: {fileID: 4701663010085560669}
+  spawn: {fileID: 0}
 --- !u!114 &8409003908712710486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +158,7 @@ GameObject:
   - component: {fileID: 8914087157147203001}
   - component: {fileID: 5449560807949313486}
   - component: {fileID: 6434230794015686908}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4742644100926046793}
   - component: {fileID: 4318688725857797315}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Hotbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7404330620094160177}
   - component: {fileID: 8642506289508286808}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6843183619059227437}
   - component: {fileID: 477836308521634072}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ray Detector 3D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +419,7 @@ GameObject:
   - component: {fileID: 7728888671952418576}
   - component: {fileID: 8690444403620031595}
   - component: {fileID: 6740260823669989399}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -606,7 +607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2066779862122790110}
   - component: {fileID: 2369491704740288494}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Inventory Slot (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8617336111085735041}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Inventory Slot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +690,7 @@ GameObject:
   - component: {fileID: 6664902702256804675}
   - component: {fileID: 1151870480622924233}
   - component: {fileID: 5185264468637582841}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4450368454769219110}
   - component: {fileID: 7945375986221989234}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Inventory Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +811,7 @@ GameObject:
   - component: {fileID: 1516601741127314227}
   - component: {fileID: 3238087736556441305}
   - component: {fileID: 2120706196025691105}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: First Person Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,7 +937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1064768406410729869}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -968,7 +969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2180484623694552010}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Inventory Slot (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1635157914840343020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,7 +1037,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7104721461585254876}
   - component: {fileID: 7315556941653079573}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Item Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1083,7 +1084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7007030868479058893}
   - component: {fileID: 7955560710365413985}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488656309316351573}
   - component: {fileID: 5507096888257323952}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Inventory Slot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1184,7 +1185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1756734948852028871}
   - component: {fileID: 5924866658870585549}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,7 +1233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2505615035370941778}
   - component: {fileID: 419021543570891818}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Inventory Slot (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1279,7 +1280,7 @@ GameObject:
   - component: {fileID: 8299136842514265725}
   - component: {fileID: 5170295303545511830}
   - component: {fileID: 8622225085941093406}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1354,7 +1355,7 @@ GameObject:
   - component: {fileID: 5918511857026997032}
   - component: {fileID: 2496857311440043448}
   - component: {fileID: 3127702515354913730}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1431,7 +1432,7 @@ GameObject:
   - component: {fileID: 9075769591586522739}
   - component: {fileID: 208345965454480933}
   - component: {fileID: 6646332919153192057}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Inventory Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1543,7 +1544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6249692204501684089}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Inventory Slot (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1620,19 +1621,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 600993946725502515, guid: 3d316e0b0dacbf94daf210c6a3ffbb87, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3058461271655154210, guid: 3d316e0b0dacbf94daf210c6a3ffbb87, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3342045552992705307, guid: 3d316e0b0dacbf94daf210c6a3ffbb87, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3416686325751568928, guid: 3d316e0b0dacbf94daf210c6a3ffbb87, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3417466588574283060, guid: 3d316e0b0dacbf94daf210c6a3ffbb87, type: 3}
       propertyPath: m_Name
@@ -1640,11 +1641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3417466588574283060, guid: 3d316e0b0dacbf94daf210c6a3ffbb87, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7754842475567508085, guid: 3d316e0b0dacbf94daf210c6a3ffbb87, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
