@@ -22,6 +22,13 @@ namespace PickMen.Players.Graphics
             Bind(slot.Item, OnItemChanged);
         }
 
+        public bool TryGetValue(out int value)
+        {
+            value = 0;
+
+            return true;
+        }
+
         public void Highlight()
         {
             highlight.gameObject.SetActive(true);

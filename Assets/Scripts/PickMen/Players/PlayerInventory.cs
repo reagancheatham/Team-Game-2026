@@ -16,7 +16,7 @@ namespace PickMen.Players
         private PlayerItemHolder itemHolder;
 
         [SerializeField, ReadOnly]
-        private int selectedSlot = 0;
+        private Ref<int> selectedSlot;
 
         [SerializeField]
         private List<InventorySlot> slots = new();
@@ -27,7 +27,7 @@ namespace PickMen.Players
         [AutoEvent(nameof(IManagedInput.Performed), nameof(OnDropInput))]
         private IManagedInput dropInput;
 
-        public int SelectedSlot => selectedSlot;
+        public Ref<int> SelectedSlot => selectedSlot;
 
         public event Action<int> SelectedSlotChanged;
 
@@ -61,26 +61,26 @@ namespace PickMen.Players
         {
             int scrollValue = Mathf.RoundToInt(info.Input.ReadValue<Vector2>().y);
 
-            selectedSlot += scrollValue;
+            selectedSlot.Value += scrollValue;
+            selectedSlot.Value = (selectedSlot.Value % slots.Count + slots.Count) % slots.Count;
 
-            selectedSlot = (selectedSlot % slots.Count + slots.Count) % slots.Count;
-
+            print("early slot: " + selectedSlot.Value);
             UpdateHeldItem();
-            SelectedSlotChanged?.Invoke(selectedSlot);
+            SelectedSlotChanged?.Invoke(selectedSlot.Value);
         }
-
+        
         private void OnDropInput()
         {
-            if (slots[selectedSlot].Item.Value == null)
+            if (slots[selectedSlot.Value].Item.Value == null)
                 return;
 
-            slots[selectedSlot].Item.Value = null;
+            slots[selectedSlot.Value].Item.Value = null;
             itemHolder.ReleaseToGround();
         }
 
         private void UpdateHeldItem()
         {
-            var slot = slots[selectedSlot];
+            var slot = slots[selectedSlot.Value];
 
             if (itemHolder.HeldItem == slot.Item.Value)
                 return;
