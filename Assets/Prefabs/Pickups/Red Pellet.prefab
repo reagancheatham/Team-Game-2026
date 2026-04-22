@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1fadeae2598da04fa28b0374b4e9107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PickMen.Interaction::PickMen.Interaction.Pickup
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 35a3182516907524087d93159c9c1cb8, type: 2}
   detector: {fileID: 3717123159706932926}
 --- !u!114 &5302426673672157622
 MonoBehaviour:

@@ -24,9 +24,6 @@ namespace PickMen.Players.Graphics
 
         private void OnSlotChanged(RefChangeEvent<int> evt)
         {
-            print("new value: " + evt.newValue);
-            return;
-
             slots[evt.oldValue].Unhighlight();
             slots[evt.newValue].Highlight();
         }

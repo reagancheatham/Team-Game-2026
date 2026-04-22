@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.10943389, g: 0.10943389, b: 0.10943389, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.4
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -278,10 +278,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 726271036807207938, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
+      propertyPath: slot
+      value: 
+      objectReference: {fileID: 1636950939}
     - target: {fileID: 2074489465188193479, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2404829787443054999, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
+      propertyPath: slot
+      value: 
+      objectReference: {fileID: 2075123434}
     - target: {fileID: 3690959281703153190, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -338,6 +346,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4115981559099458544, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
+      propertyPath: slot
+      value: 
+      objectReference: {fileID: 293150423}
     - target: {fileID: 4588004445790911395, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -370,6 +382,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8501554429216533382, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
+      propertyPath: transformReference
+      value: 
+      objectReference: {fileID: 1923106565}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -632,6 +648,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71e8957d1705c4f4b97d64abaf1e8309, type: 3}
+--- !u!114 &293150423 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 419021543570891818, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
+  m_PrefabInstance: {fileID: 130954351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d4893ab2ee8ec4dafe9c51225a1b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PickMen.Players::PickMen.Players.InventorySlot
 --- !u!1001 &304140957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4257,6 +4284,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3af06e9d14abe4b45a9e230ddc37147e, type: 3}
+--- !u!114 &1636950939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5507096888257323952, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
+  m_PrefabInstance: {fileID: 130954351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d4893ab2ee8ec4dafe9c51225a1b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PickMen.Players::PickMen.Players.InventorySlot
 --- !u!1001 &1639716150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5068,6 +5106,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6143604510025739932, guid: ae7edb8f71f8bf946a64276a1d12a2d3, type: 3}
   m_PrefabInstance: {fileID: 1904874631}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1923106565 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8907500429339788152, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
+  m_PrefabInstance: {fileID: 130954351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1963025537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5253,6 +5296,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6143604510025739932, guid: ae7edb8f71f8bf946a64276a1d12a2d3, type: 3}
   m_PrefabInstance: {fileID: 1756060081}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2075123434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2369491704740288494, guid: d4573f10a5bebae49b86349d0d8f736c, type: 3}
+  m_PrefabInstance: {fileID: 130954351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d4893ab2ee8ec4dafe9c51225a1b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PickMen.Players::PickMen.Players.InventorySlot
 --- !u!1001 &2088205371
 PrefabInstance:
   m_ObjectHideFlags: 0

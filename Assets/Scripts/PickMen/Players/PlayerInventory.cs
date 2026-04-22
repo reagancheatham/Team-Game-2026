@@ -29,8 +29,6 @@ namespace PickMen.Players
 
         public Ref<int> SelectedSlot => selectedSlot;
 
-        public event Action<int> SelectedSlotChanged;
-
         private void Awake()
         {
             scrollInventoryInput = input.ScrollInventory;
@@ -44,6 +42,17 @@ namespace PickMen.Players
 
         public void AddItem(Item item)
         {
+            var currentSlot = slots[selectedSlot.Value];
+
+            if (currentSlot.Item.Value == null)
+            {
+                currentSlot.Item.Value = item;
+                currentSlot.Item.Value.gameObject.SetActive(false);
+
+                UpdateHeldItem();
+                return;
+            }
+
             foreach (var slot in slots)
             {
                 if (slot.Item.Value == null)
@@ -61,12 +70,11 @@ namespace PickMen.Players
         {
             int scrollValue = Mathf.RoundToInt(info.Input.ReadValue<Vector2>().y);
 
-            selectedSlot.Value += scrollValue;
-            selectedSlot.Value = (selectedSlot.Value % slots.Count + slots.Count) % slots.Count;
+            int newValue = selectedSlot.Value + scrollValue;
+            newValue = (newValue % slots.Count + slots.Count) % slots.Count;
 
-            print("early slot: " + selectedSlot.Value);
+            selectedSlot.Value = newValue;
             UpdateHeldItem();
-            SelectedSlotChanged?.Invoke(selectedSlot.Value);
         }
         
         private void OnDropInput()

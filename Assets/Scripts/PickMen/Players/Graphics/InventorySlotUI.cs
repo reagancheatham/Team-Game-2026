@@ -49,10 +49,12 @@ namespace PickMen.Players.Graphics
             if (item == null)
             {
                 image.sprite = null;
+                image.color = Color.clear;
                 return;
             }
 
             image.sprite = item.Data.Sprite;
+            image.color = Color.white;
         }
     }
 }
