@@ -1,4 +1,5 @@
 using PickMen.Interaction;
+using PickMen.Levels;
 using Shears;
 using Shears.Detection;
 using Shears.Input;
@@ -11,6 +12,9 @@ namespace PickMen.Players
         [Header("Components")]
         [SerializeField]
         private PlayerInput input;
+
+        [SerializeField]
+        private PlayerMovement playerMovement;
 
         [SerializeField]
         private PlayerInventory inventory;
@@ -33,6 +37,15 @@ namespace PickMen.Players
 
             if (detector.TryGetDetection(out Item item, true))
                 inventory.AddItem(item);
+            else if (detector.TryGetDetection(out Teleporter teleporter, true))
+            {
+                playerMovement.Controller.enabled = false;
+                playerMovement.transform.SetPositionAndRotation(
+                    teleporter.TargetPosition.position, 
+                    teleporter.TargetPosition.rotation
+                );
+                playerMovement.Controller.enabled = true;
+            }
         }
     }
 }

@@ -13,9 +13,8 @@ namespace PickMen.Interaction
             if (!detector.Detect() || !detector.TryGetDetection(out Item item, true))
                 return;
 
+            ScoreManager.AddScore(item.Data.Value);
             Destroy(item.gameObject);
-            ScoreManager.AddScore(12);
-
         }
     }
 }

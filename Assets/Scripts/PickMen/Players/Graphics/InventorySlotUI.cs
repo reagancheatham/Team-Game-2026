@@ -22,6 +22,13 @@ namespace PickMen.Players.Graphics
             Bind(slot.Item, OnItemChanged);
         }
 
+        public bool TryGetValue(out int value)
+        {
+            value = 0;
+
+            return true;
+        }
+
         public void Highlight()
         {
             highlight.gameObject.SetActive(true);
@@ -42,10 +49,12 @@ namespace PickMen.Players.Graphics
             if (item == null)
             {
                 image.sprite = null;
+                image.color = Color.clear;
                 return;
             }
 
             image.sprite = item.Data.Sprite;
+            image.color = Color.white;
         }
     }
 }

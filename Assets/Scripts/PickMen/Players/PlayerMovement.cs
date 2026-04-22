@@ -37,7 +37,6 @@ namespace PickMen.Players
             this.data = data;
             this.input = input;
             originalHeight = controller.height;
-
             input.JumpInput.Performed += OnJumpInput;
             isListeningToJump = true;
         }

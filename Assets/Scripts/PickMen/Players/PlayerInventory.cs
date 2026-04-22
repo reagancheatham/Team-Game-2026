@@ -16,7 +16,7 @@ namespace PickMen.Players
         private PlayerItemHolder itemHolder;
 
         [SerializeField, ReadOnly]
-        private int selectedSlot = 0;
+        private Ref<int> selectedSlot;
 
         [SerializeField]
         private List<InventorySlot> slots = new();
@@ -27,9 +27,7 @@ namespace PickMen.Players
         [AutoEvent(nameof(IManagedInput.Performed), nameof(OnDropInput))]
         private IManagedInput dropInput;
 
-        public int SelectedSlot => selectedSlot;
-
-        public event Action<int> SelectedSlotChanged;
+        public Ref<int> SelectedSlot => selectedSlot;
 
         private void Awake()
         {
@@ -44,6 +42,17 @@ namespace PickMen.Players
 
         public void AddItem(Item item)
         {
+            var currentSlot = slots[selectedSlot.Value];
+
+            if (currentSlot.Item.Value == null)
+            {
+                currentSlot.Item.Value = item;
+                currentSlot.Item.Value.gameObject.SetActive(false);
+
+                UpdateHeldItem();
+                return;
+            }
+
             foreach (var slot in slots)
             {
                 if (slot.Item.Value == null)
@@ -61,26 +70,25 @@ namespace PickMen.Players
         {
             int scrollValue = Mathf.RoundToInt(info.Input.ReadValue<Vector2>().y);
 
-            selectedSlot += scrollValue;
+            int newValue = selectedSlot.Value + scrollValue;
+            newValue = (newValue % slots.Count + slots.Count) % slots.Count;
 
-            selectedSlot = (selectedSlot % slots.Count + slots.Count) % slots.Count;
-
+            selectedSlot.Value = newValue;
             UpdateHeldItem();
-            SelectedSlotChanged?.Invoke(selectedSlot);
         }
-
+        
         private void OnDropInput()
         {
-            if (slots[selectedSlot].Item.Value == null)
+            if (slots[selectedSlot.Value].Item.Value == null)
                 return;
 
-            slots[selectedSlot].Item.Value = null;
+            slots[selectedSlot.Value].Item.Value = null;
             itemHolder.ReleaseToGround();
         }
 
         private void UpdateHeldItem()
         {
-            var slot = slots[selectedSlot];
+            var slot = slots[selectedSlot.Value];
 
             if (itemHolder.HeldItem == slot.Item.Value)
                 return;
