@@ -45,6 +45,7 @@
   <Project Path="Unity.TextMeshPro.Editor.csproj" />
   <Project Path="Shears.HitDetection.csproj" />
   <Project Path="Unity.Burst.Editor.csproj" />
+  <Project Path="Unity.AI.Navigation.Editor.Tests.csproj" />
   <Project Path="Shears.ActionQueues.csproj" />
   <Project Path="Unity.Rider.Editor.csproj" />
   <Project Path="Unity.VisualScripting.State.csproj" />
@@ -55,7 +56,9 @@
   <Project Path="Unity.AI.Navigation.Editor.csproj" />
   <Project Path="Unity.Multiplayer.Center.Common.csproj" />
   <Project Path="Shears.UI.Editor.csproj" />
+  <Project Path="Unity.AI.Navigation.LegacyOffMeshLink.Tests.csproj" />
   <Project Path="Unity.InputSystem.ForUI.csproj" />
+  <Project Path="PickMen.Levels.csproj" />
   <Project Path="PlayMode.csproj" />
   <Project Path="Unity.AI.Navigation.csproj" />
   <Project Path="Unity.Collections.CodeGen.csproj" />
@@ -66,6 +69,7 @@
   <Project Path="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
   <Project Path="UnityEditor.UI.Analytics.csproj" />
   <Project Path="PickMen.Players.csproj" />
+  <Project Path="Unity.AI.Navigation.Tests.csproj" />
   <Project Path="Shears.Pathfinding.csproj" />
   <Project Path="Shears.Common.Editor.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.csproj" />
@@ -76,6 +80,7 @@
   <Project Path="Unity.Profiling.Core.csproj" />
   <Project Path="Shears.UI.csproj" />
   <Project Path="Shears.Beziers.csproj" />
+  <Project Path="PickMen.Interaction.csproj" />
   <Project Path="Shears.Input.Editor.csproj" />
   <Project Path="Shears.Interaction.csproj" />
   <Project Path="Shears.Detection.csproj" />
@@ -83,7 +88,6 @@
   <Project Path="Unity.CollabProxy.Editor.csproj" />
   <Project Path="Shears.Cameras.csproj" />
   <Project Path="Unity.RenderPipeline.Universal.ShaderLibrary.csproj" />
-  <Project Path="PickMen.Interaction.csproj" />
   <Project Path="Shears.Loading.Editor.csproj" />
   <Project Path="Shears.GraphViews.csproj" />
   <Project Path="Shears.Editor.WindowTools.csproj" />
@@ -102,6 +106,7 @@
   <Project Path="Shears.HitDetection.Editor.csproj" />
   <Project Path="Unity.Rendering.LightTransport.Editor.csproj" />
   <Project Path="Unity.Collections.Editor.csproj" />
+  <Project Path="Unity.AI.Navigation.Tests.EditorInPlaymode.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.Config.Runtime.csproj" />
   <Project Path="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj" />
   <Project Path="Unity.RenderPipelines.Core.ShaderLibrary.csproj" />

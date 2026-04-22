@@ -30,6 +30,8 @@ namespace PickMen.Players
         private bool isListeningToJump;
         private float originalHeight;
 
+        public CharacterController Controller => controller;
+
         public void Initialize(PlayerData data, PlayerInput input)
         {
             this.data = data;
