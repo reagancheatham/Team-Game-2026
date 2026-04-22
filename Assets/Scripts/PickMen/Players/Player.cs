@@ -1,9 +1,10 @@
+using PickMen.Interaction;
 using Shears.Input;
 using UnityEngine;
 
 namespace PickMen.Players
 {
-    public class Player : MonoBehaviour
+    public class Player : MonoBehaviour, IKillable
     {
         [Header("Data")]
         [SerializeField]
@@ -32,7 +33,7 @@ namespace PickMen.Players
             movement.UpdateMovement();
         }
 
-        public void Die()
+        public void Kill()
         {
             movement.Controller.enabled = false;
             transform.position = spawn.position;

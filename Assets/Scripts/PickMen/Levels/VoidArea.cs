@@ -1,4 +1,4 @@
-using PickMen.Players;
+using PickMen.Interaction;
 using Shears.Detection;
 using UnityEngine;
 
@@ -11,10 +11,10 @@ namespace PickMen.Levels
 
         private void FixedUpdate()
         {
-            if (!areaDetector.Detect() || !areaDetector.TryGetDetection(out Player player))
+            if (!areaDetector.Detect() || !areaDetector.TryGetDetection(out IKillable killable))
                 return;
 
-            player.Die();
+            killable.Kill();
         }
     }
 }

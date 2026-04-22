@@ -487,6 +487,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 6536d9fa632c5f641830aef927c061c4, type: 2}
   input: {fileID: 8409003908712710486}
   movement: {fileID: 4701663010085560669}
+  spawn: {fileID: 0}
 --- !u!114 &8409003908712710486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,7 +926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: PickMen.Players.Graphics::PickMen.Players.Graphics.InventorySlotUI
   logLevels: 29
-  slot: {fileID: 7945375986221989234}
+  slot: {fileID: 419021543570891818}
   image: {fileID: 3652525639683661138}
   highlight: {fileID: 19806678142554560}
 --- !u!1 &4096326792292284748
@@ -1468,7 +1469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: PickMen.Players.Graphics::PickMen.Players.Graphics.InventorySlotUI
   logLevels: 29
-  slot: {fileID: 7945375986221989234}
+  slot: {fileID: 5507096888257323952}
   image: {fileID: 253900376965791486}
   highlight: {fileID: 6684839005902315989}
 --- !u!1 &5924512516836089058
@@ -1586,7 +1587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: PickMen.Players.Graphics::PickMen.Players.Graphics.InventorySlotUI
   logLevels: 29
-  slot: {fileID: 7945375986221989234}
+  slot: {fileID: 2369491704740288494}
   image: {fileID: 1433077181692037466}
   highlight: {fileID: 4521453356242362710}
 --- !u!1 &6262890070832575449
@@ -1858,6 +1859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: PickMen.Players::PickMen.Players.PlayerInteraction
   input: {fileID: 8409003908712710486}
+  playerMovement: {fileID: 4701663010085560669}
   inventory: {fileID: 8642506289508286808}
   detector: {fileID: 477836308521634072}
 --- !u!1 &6730296703901246664
@@ -2339,6 +2341,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3946167263328758342, guid: 3d316e0b0dacbf94daf210c6a3ffbb87, type: 3}
+      propertyPath: transformReference
+      value: 
+      objectReference: {fileID: 8907500429339788152}
     - target: {fileID: 7754842475567508085, guid: 3d316e0b0dacbf94daf210c6a3ffbb87, type: 3}
       propertyPath: m_Layer
       value: 9

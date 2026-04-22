@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: PickMen.Interaction::PickMen.Interaction.ItemData
   itemName: Strawberry
   sprite: {fileID: 21300000, guid: 63191c44063f19d458c0bbfd302604ab, type: 3}
+  value: 100

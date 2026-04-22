@@ -13,5 +13,9 @@ namespace PickMen.Interaction
         [SerializeField]
         [AutoProperty]
         private Sprite sprite;
+
+        [SerializeField]
+        [AutoProperty]
+        private int value;
     }
 }

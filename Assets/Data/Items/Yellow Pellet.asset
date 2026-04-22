@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: PickMen.Interaction::PickMen.Interaction.ItemData
   itemName: Yellow Pellet
   sprite: {fileID: 21300000, guid: 4c54035b456d0dc4b8a04974aabb40cb, type: 3}
+  value: 10
